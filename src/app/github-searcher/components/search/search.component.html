@@ -1,3 +1,14 @@
-<p>
-  search works!
-</p>
+<div class="search-block">
+  <div class="search-input">
+    <h1>Search Github Repository</h1>
+    <mat-form-field>
+      <input matInput 
+      placeholder="Search..."
+      [(ngModel)]="searchString"
+      (ngModelChange)="handleChange($event)">
+    </mat-form-field>
+  </div>
+  <div class="card" *ngIf="user">
+    <app-card [user]="user"></app-card>
+  </div>
+</div>
